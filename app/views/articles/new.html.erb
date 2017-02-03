@@ -49,7 +49,7 @@ h1 {
         <td>
         <ul id = "menu" align = "center">
           <li id ="menuItem"><%= link_to 'Home', root_path %></li>
-          <li id ="menuItem"><%= link_to 'Articles', articles_path %></li>
+          <li id ="menuItem"><%= link_to 'Articles', new_article_path %></li>
           <li id ="menuItem"><%= link_to 'About', about_path %></li>
         </ul>
           
@@ -60,8 +60,20 @@ h1 {
     <table border = 1 width = 480 height = 300 align = "center" style = "background-color:lightgray">
       <tr align = "center">
         <td style = "color:black">
-          Still working on Articles, but stay tuned to see my progress :)
+          <%= form_for @article do |f| %>
+          <p>
+           <%= f.label :title %> <br/>
+           <%= f.text_field :title %>
+          </p>
+          <p>
+            <%= f.label :description %> <br/>
+            <%= f.text_area :description %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
           
+          <% end %>
         </td>
        </tr> 
       </table>  
