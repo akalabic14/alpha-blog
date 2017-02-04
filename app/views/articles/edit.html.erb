@@ -1,6 +1,6 @@
 <html>
   <head>
-      <title>Homepage</title>
+      <title>Edit Article</title>
       <style>
         body{
     
@@ -50,17 +50,43 @@ h1 {
         <ul id = "menu" align = "center">
           <li id ="menuItem"><%= link_to 'Home', root_path %></li>
           <li id ="menuItem"><%= link_to 'Articles', articles_path %></li>
-          <li id ="menuItem"><%= link_to 'New Article', new_article_path %></li>
           <li id ="menuItem"><%= link_to 'About', about_path %></li>
         </ul>
           
         </td>
+      </tr>
     </table>
-    
-          <p align = "center"><%= image_tag 'ljudi.jpg' %></p>
+    <br>
+    <table border = 1 width = 480 height = 300 align = "center" style = "background-color:lightgray">
+      <tr align = "center">
+        <td style = "color:black">
+          <% if @article.errors.any? %>
+            <ul>
+            <h2>The article could not be updated</h2>
+              <% @article.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          <% end %>
+          <%= form_for @article do |f| %>
+          <p>
+           <%= f.label :title %> <br/>
+           <%= f.text_field :title %>
+          </p>
+          <p>
+            <%= f.label :description %> <br/>
+            <%= f.text_area :description %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+          
+          <% end %>
+        </td>
+       </tr> 
+      </table>  
       
-  
-    
   </body>
   
 </html>
+
