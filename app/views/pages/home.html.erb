@@ -1,41 +1,7 @@
 <html>
   <head>
       <title>Homepage</title>
-      <style>
-        body{
-    
-    background-color:#222;
-    color:lightgray;
-    
-}
-h1 {
-  font-family:vedrana;
-    font-size:300%;
-}
-#menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-#menuItem {
-    float: left;
-}
-
-#menuItem a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#menuItem a:hover {
-    background-color: #111;
-}
-      </style>
+      <%= render 'articles/style' %>
       
   </head>
   
@@ -50,7 +16,6 @@ h1 {
         <ul id = "menu" align = "center">
           <li id ="menuItem"><%= link_to 'Home', root_path %></li>
           <li id ="menuItem"><%= link_to 'Articles', articles_path %></li>
-          <li id ="menuItem"><%= link_to 'New Article', new_article_path %></li>
           <li id ="menuItem"><%= link_to 'About', about_path %></li>
         </ul>
           
