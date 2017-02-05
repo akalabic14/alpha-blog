@@ -1,31 +1,12 @@
 <html>
   <head>
       <title>Homepage</title>
-      <%= render 'articles/style' %>
       
   </head>
   
-  <body>
-    <heading>
-    <h1 align = "center">Alpha-Blog</h1>
-    </heading>
-    <table border = 1 align = "center" style = "background-color:lightgray">
-      <tr width = 100$ height = 50 align = "center">
-        
-        <td>
-        <ul id = "menu" align = "center">
-          <li id ="menuItem"><%= link_to 'Home', root_path %></li>
-          <li id ="menuItem"><%= link_to 'Articles', articles_path %></li>
-          <li id ="menuItem"><%= link_to 'About', about_path %></li>
-        </ul>
-          
-        </td>
-    </table>
-    
-          <p align = "center"><%= image_tag 'ljudi.jpg' %></p>
-      
-  
-    
-  </body>
+  <div class = "center jumbotron">
+    <h1>Welcome to the Alpha-Blog</h1>
+    <%= link_to 'Sign up now', "#", class: "btn btn-primary btn-lg btn-xlarge" %>
+  </div>
   
 </html>

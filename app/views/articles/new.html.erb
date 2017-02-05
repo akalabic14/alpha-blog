@@ -1,40 +1,17 @@
 <html>
-  <head>
-      <title>Articles</title>
-      <%= render 'style' %>
-      
-  </head>
-  
-  <body>
-    <heading>
-    <h1 align = "center">Alpha-Blog</h1>
-    </heading>
-    <table border = 1 align = "center" style = "background-color:lightgray">
-      <tr width = 100$ height = 50 align = "center">
-        
-        <td>
-        <ul id = "menu" align = "center">
-          <li id ="menuItem"><%= link_to 'Home', root_path %></li>
-          <li id ="menuItem"><%= link_to 'Articles', articles_path %></li>
-          <li id ="menuItem"><%= link_to 'About', about_path %></li>
-        </ul>
-          
-        </td>
-      </tr>
-    </table>
-    <br>
-    <table border = 1 width = 480 height = 300 align = "center" style = "background-color:lightgray">
-      <tr align = "center">
-        <td style = "color:black">
-          <% if @article.errors.any? %>
-            <ul>
+    
+  <table border = 1 width = 480 height = 300 align = "center" style = "background-color:lightgray">
+    <tr align = "center">
+      <td style = "color:black">
+        <% if @article.errors.any? %>
+          <ul>
             <h2>The article could not be created</h2>
               <% @article.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
               <% end %>
-            </ul>
-          <% end %>
-          <%= form_for @article do |f| %>
+          </ul>
+        <% end %>
+        <%= form_for @article do |f| %>
           <p>
            <%= f.label :title %> <br/>
            <%= f.text_field :title %>
@@ -46,11 +23,10 @@
           <p>
             <%= f.submit %>
           </p>
-          
-          <% end %>
+        <% end %>
         </td>
-       </tr> 
-      </table>  
+      </tr> 
+    </table>  
       
   </body>
   

@@ -1,2 +1,115 @@
+$navbar-default-bg:#959595;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo{
+  float:left;
+  font-size:1.7em;
+  color:#fff;
+  letter-spacing:-1px;
+  font-weight:bold;
+}
+
+#logo:hover{
+  color:#fff;
+  text-decoration:none;
+}
+
+#navigaciona-dugmad li a{
+  color:#fff;
+}
+
+#padajuca-lista li a{
+  color:#959595;
+}
+
+.center{
+  text-align:center;
+}
+
+.jumbotron {
+
+background-image: asset-url('ljudi.jpg');
+
+background-size: cover;
+
+height: 450px;
+
+}
+
+.jumbotron h1 {
+
+color: #fff;
+
+text-align: center;
+
+margin-bottom: 30px;
+
+letter-spacing: -1px;
+
+font-weight: bold;
+
+}
+
+.btn-xlarge {
+
+font-size: 1.7em;
+
+background-color: #504A4B;
+
+}
+
+.btn-xlarge:hover {
+
+background-color: #959595;
+
+}
+
+footer {
+
+margin-top: 45px;
+
+padding-top: 5px;
+
+border-top: 1px solid #eaeaea;
+
+color: black;
+
+background-color: #959595;
+
+}
+
+footer a {
+
+color: black;
+
+}
+
+footer a:hover {
+
+color: black;
+
+}
+
+footer small {
+
+float: left;
+
+}
+
+footer ul {
+
+float: right;
+
+list-style: none;
+
+}
+
+footer ul li {
+
+float: left;
+
+margin-left: 15px;
+
+}

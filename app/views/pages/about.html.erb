@@ -1,39 +1,12 @@
 <html>
-  <head>
-      <title>About</title>
-      <%= render 'articles/style' %>
-      
-  </head>
-  
-  <body>
-    <heading>
-    <h1 align = "center">Alpha-Blog</h1>
-    </heading>
-    <table border = 1 align = "center" style = "background-color:lightgray">
-      <tr width = 100$ height = 50 align = "center">
-        
-        <td>
-        <ul id = "menu" align = "center">
-          <li id ="menuItem"><%= link_to 'Home', root_path %></li>
-          <li id ="menuItem"><%= link_to 'Articles', articles_path %></li>
-          <li id ="menuItem"><%= link_to 'About', about_path %></li>
-        </ul>
-          
-        </td>
-      </tr>
-    </table>
-    <br>
-    <table border = 1 width = 480 height = 300 align = "center" style = "background-color:lightgray">
-      <tr align = "center">
-        <td style = "color:black">
-          Alpha-Blog is an application designed to help explaining Rails<br>
-          on Ruby. This blog was created by Aleksandar Kalabic  <br>
-          You can find me on <%= link_to 'Github:akalabic14', "https://github.com/akalabic14", :target => "_blank" %> <br>
-          
-        </td>
-       </tr> 
-      </table>  
-  </body>
-  
+  <table border = 1 width = 480 height = 300 align = "center" style = "background-color:lightgray">
+    <tr align = "center">
+      <td style = "color:black">
+        Alpha-Blog is an application designed to help explaining Rails<br>
+        on Ruby. This blog was created by Aleksandar Kalabic  <br>
+        You can find me on <%= link_to 'Github:akalabic14', "https://github.com/akalabic14", :target => "_blank" %> <br>
+      </td>
+    </tr> 
+  </table>  
 </html>
 
