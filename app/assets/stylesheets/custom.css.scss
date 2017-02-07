@@ -1,23 +1,43 @@
-$navbar-default-bg:#959595;
+$navbar-default-bg: #959595;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 #logo{
-  float:left;
-  font-size:1.7em;
-  color:#fff;
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
   letter-spacing:-1px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 #logo:hover{
-  color:#fff;
-  text-decoration:none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sredina{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about_jumbotron{
+  background-size: 500px 350px;
+  background-color: #959595;
+  width: 500px;
+  height: 350px;
+  color: #fff;
+}
+
+#about_jumbotron a{
+  color: #fff;
 }
 
 #navigaciona-dugmad li a{
   color:#fff;
+  font-weight: bold;
+  letter-spacing:1px;
 }
 
 #padajuca-lista li a{
@@ -42,19 +62,53 @@ letter-spacing: -1px;
 font-weight: bold;
 }
 
+.btn-default {
+background-color: #959595;
+color:#fff;
+}
 .btn-xlarge {
 font-size: 1.7em;
-background-color: #504A4B;
+font-weight: bold;
+background-color: #000;
+color:#fff;
 }
 
 .btn-xlarge:hover {
 background-color: #959595;
+color: #fff;
+}
+.article-actions {
+padding-top: 20px;
+margin-bottom: -15px;
+text-align: center;
+}
+
+.article-title {
+margin-top: -15px;
+font-weight: bold;
+font-size: 1.8em;
+text-align: center;
+}
+
+.article-title a {
+color: #959595;
+}
+
+.article-title a:hover {
+text-decoration: none;
+}
+
+.article-body {
+text-align: center;
+border-top: 1px solid #959595;
+padding-top: 10px;
+padding-bottom: 15px;
 }
 
 footer {
 margin-top: 45px;
 padding-top: 5px;
-border-top: 1px solid #eaeaea;
+border-top: 1px solid #959595;
 color: black;
 background-color: #959595;
 }

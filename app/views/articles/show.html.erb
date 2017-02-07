@@ -1,14 +1,13 @@
 <html>
-  <table border = 1 width = 480 height = 300 align = "center" style = "background-color:lightgray">
-    <tr align = "center">
-      <td style = "color:black">
-        <h3>
-          <%= @article.title %> <br/>
-        </h3>
-        <p>
-          <%= @article.description %>
-        </p>
-      </td>
-    </tr> 
-  </table>  
+<h2 align="center"><%= @article.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2 center">
+  <%= simple_format(@article.description) %>
+  <div class="article-actions">
+    <%= link_to "Edit", edit_article_path(@article), class: "btn btn-xm btn-primary" %>
+    <%= link_to "Delete", article_path(@article), method: :delete,
+                                       data: { confirm: "Are you sure you want to delete the article?"},
+                                       class: "btn btn-xm btn-danger" %>
+    <%= link_to "Back", articles_path, class: "btn btn-xm btn-default" %>
+  </div>
+</div> 
 </html>
