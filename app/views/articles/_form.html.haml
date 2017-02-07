@@ -2,7 +2,6 @@
   = bootstrap_form_for @article, :html => {'accept-charset' => 'UTF-8'} do |f|
     = f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true
     = f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article"
-    .col-2.center  
+    .form-inline.center  
       = f.submit 'Submit', class: 'btn btn-primary btn-lg'
-    .col-2.center
       =link_to 'Cancel', articles_path, class: 'btn btn-danger btn-lg'
