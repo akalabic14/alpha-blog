@@ -8,9 +8,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
-# def edit
-#   @user = User.find(params[:id])
-# end
+ def edit
+   @user = User.find(params[:id])
+ end
   
   def create
     @user = User.new(user_params)
@@ -33,15 +33,15 @@ class UsersController < ApplicationController
 #   redirect_to articles_path
 # end
   
-# def update
-#   @user = User.find(params[:id])
-#   if @user.update(user_params)
-#     flash[:success] = "User was successfully updated"
-#     redirect_to user_path(@user)
-#   else
-#     render 'edit'
-#   end
-# end
+ def update
+   @user = User.find(params[:id])
+   if @user.update(user_params)
+     flash[:success] = "User was successfully updated"
+     redirect_to articles_path(@user)
+   else
+     render 'edit'
+   end
+ end
   
   private
   def user_params

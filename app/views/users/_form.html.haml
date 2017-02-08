@@ -4,5 +4,5 @@
     = f.email_field :email, class: "form-control", placeholder: "Enter your email"
     = f.password_field :password, class: "form-control",placeholder: "Enter your password"
     .form-inline.center  
-      = f.submit 'Sign Up', class: 'btn btn-primary btn-lg'
+      = f.submit @user.new_record? ? 'Sign up' : 'Update account',  class: 'btn btn-primary btn-lg'
       =link_to 'Cancel', articles_path, class: 'btn btn-danger btn-lg'
