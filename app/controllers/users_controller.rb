@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-# def index
-#   @users = User.all
-# end
+ def index
+   @users = User.all
+ end
   
   def new
     @user = User.new
@@ -16,15 +16,15 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to the alpha-blog #{@user.username}"
-      redirect_to articles_path
+      redirect_to users_path(@user)
     else
       render 'new'
     end
   end
   
-# def show
-#   @user = User.find(params[:id])
-# end
+ def show
+   @user = User.find(params[:id])
+ end
   
 # def destroy
 #   @user = User.find(params[:id])
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
    @user = User.find(params[:id])
    if @user.update(user_params)
      flash[:success] = "User was successfully updated"
-     redirect_to articles_path(@user)
+     redirect_to user_path(@user)
    else
      render 'edit'
    end
