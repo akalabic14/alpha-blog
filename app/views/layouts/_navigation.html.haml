@@ -37,6 +37,7 @@
         %ul#navigaciona-dugmad.nav.navbar-nav.navbar-right
           %li#padajuca-lista.dropdown
             %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              = "Admin" if current_user.admin?
               Settings
               %span.caret
             %ul.dropdown-menu
