@@ -1,0 +1,9 @@
+%h1.center Log in
+.sredina
+  .col-xs-5
+    = bootstrap_form_for :session, :html => {'accept-charset' => 'UTF-8'} do |f|
+      = f.email_field :email, class: "form-control", placeholder: "Enter your email", autofocus: true
+      = f.password_field :password, class: "form-control"
+      .form-inline.center  
+        = f.submit 'Log in',  class: 'btn btn-primary btn-lg'
+        =link_to 'Cancel', root_path, class: 'btn btn-danger btn-lg'
