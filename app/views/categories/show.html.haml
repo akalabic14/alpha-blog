@@ -1,0 +1,10 @@
+%h1.center
+  = "Category: " + @category.name 
+.center
+  %span.badge
+    = link_to "Edit category name", edit_category_path(@category)
+.center
+  = will_paginate @category_articles
+= render 'articles/articles', obj: @category_articles
+.center
+  = will_paginate @category_articles

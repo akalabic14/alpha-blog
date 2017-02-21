@@ -1,0 +1,8 @@
+%h1.center Update category name:
+.sredina
+  .col-xs-6
+    = bootstrap_form_for @category, :html => {'accept-charset' => 'UTF-8'} do |f|
+      = f.text_field :name, class: "form-control", placeholder: "Name your category", autofocus: true
+      .form-inline.center  
+        = f.submit 'Update', class: 'btn btn-primary btn-md'
+        =link_to 'Cancel', categories_path, class: 'btn btn-danger btn-md'

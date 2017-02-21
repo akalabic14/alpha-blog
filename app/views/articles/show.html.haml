@@ -1,6 +1,9 @@
 %h2{:align => "center"}= @article.title
 .well.col-xs-8.col-xs-offset-2.center
   = simple_format(@article.description)
+  - if @article.categories.any?
+    %p
+      = render @article.categories
   .article-meta-details.center
     %small
       Created: 

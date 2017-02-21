@@ -5,6 +5,9 @@
         = link_to article.title, article_path(article)
       .article-body
         = truncate(article.description, length: 100)
+      - if article.categories.any?
+        %p.center
+          = render article.categories
       .article-meta-details.center
         %small
           Created by: #{article.user.username if article.user},
